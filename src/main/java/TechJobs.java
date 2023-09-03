@@ -44,7 +44,7 @@ public class TechJobs {
 
                     ArrayList<String> results = JobData.findAll(columnChoice);
 
-                    System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
+                    System.out.println("*** All " + columnChoices.get(columnChoice) + " Values ***");
 
                     // Print list of skills, employers, etc
                     for (String item : results) {
@@ -58,7 +58,7 @@ public class TechJobs {
                 String searchField = getUserSelection("Search by:", columnChoices);
 
                 // What is their search term?
-                System.out.println("\nSearch term:");
+                System.out.println("Search term:");
                 String searchTerm = in.nextLine();
 
                 if (searchField.equals("all")) {
@@ -87,7 +87,7 @@ public class TechJobs {
 
         do {
 
-            System.out.println("\n" + menuHeader);
+            System.out.println("" + menuHeader);
 
             // Print available choices
             for (int j = 0; j < choiceKeys.length; j++) {
@@ -125,14 +125,14 @@ public class TechJobs {
             //User types search term that is found in hashmap and results are printed
         } else {
             for (int i = 0; i < someJobs.size(); i++) {
-                System.out.println("***** ");
+                System.out.println("*****");
                 for (Map.Entry<String, String> entry : someJobs.get(i).entrySet()) {
                     String key = entry.getKey();
                     Object value = entry.getValue();
 
                     System.out.println(key + ": " + value);
                 }
-                System.out.println("***** \n");
+                System.out.println("*****");
             }
         }
     }
